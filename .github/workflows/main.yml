@@ -8,7 +8,7 @@ on:
 jobs:
   secure-rdp:
     runs-on: windows-latest
-    timeout-minutes: 360
+    timeout-minutes: 360000
 
     steps:
       - name: Enable RDP
@@ -60,5 +60,5 @@ jobs:
         run: |
           for ($i=0; $i -lt 72; $i++) {
             Write-Host "RDP alive: $(Get-Date)"
-            Start-Sleep 300
+            Start-Sleep 30000
           }
